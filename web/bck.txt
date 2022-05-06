@@ -1,0 +1,42 @@
+module.exports = {
+  content: ["./src/**/*.tsx"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+old app
+
+interface ButtonProps{
+  text?: string;
+}
+
+function Button(props: ButtonProps){
+  return <button className="bg-orange-800 px-4 h-10 rounded text-violet-100 hover:bg-green-500 transition-colors ">{props.text ?? 'Default'}</button> /* px padding no eixo x*/
+} 
+
+function App() {
+  return (
+  <div className="flex gap-2">
+    <Button text="enviar" />
+    <Button text="ok" />
+    <Button />
+  </div> 
+  ) 
+}
+
+export default App
+
+
+            { isWidgetOpen ? <p>Hello</p> : null }    
+            { isWidgetOpen && <p>Hello</p> }   
+
+------------estado
+               const [isWidgetOpen, setIsWidgetOpen] = useState(false)
+
+    function toggleWidgetVisibility(){
+        setIsWidgetOpen(!isWidgetOpen)
+    } 
+--------------estado
